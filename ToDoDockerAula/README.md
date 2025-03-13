@@ -1,7 +1,9 @@
 ####Introdução
+
 Atividade Realizada pelo Aluno Felipe Biava Favarin para a disciplina de Desenvolvimento Web II do bacharelado em Ciência da Computação no Instituto Federal Catarinense Campus Videira
 
 ####Propósito
+
 Criar um ToDo List usando HTML, Flask em Python, conectando com banco de dados SQLite e criando containers com Docker.
 Temos a seguinte estrutura:
 
@@ -28,6 +30,7 @@ docker compose up -d --build
 Ao executar esses comandos entre em seu navegador e digite 'localhost' , assim, você verá a aplicação funcionando localmente.
 
 ####Comandos para Containers
+
 Visualizar os containers em execução.
 ´´´sh
 docker ps
@@ -59,6 +62,7 @@ docker compose exec nginx curl http://app2:5001/oi
 ´´´
 
 ####Parar Containers
+
 Para o container app1.
 ´´´sh
 docker compose stop app1
@@ -72,6 +76,7 @@ docker compose stop app2
 Assim conseguimos testar a funcionalidade de backup do App3
 
 ####Limpeza dos Containers
+
 Para e remove todos os containers do docker compose
 ´´´sh
 docker compose down
