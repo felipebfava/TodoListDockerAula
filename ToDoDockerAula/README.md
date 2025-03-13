@@ -11,78 +11,81 @@ Temos a seguinte estrutura:
 
 
 Para acessar o repositório localmente faça:
-´´´sh
+
+```sh
 git clone https://github.com/felipebfava/TodoListDockerAula.git
-´´´
+```
 
 Abra-o em um editor de código de preferência (Visual Studio Code, etc.)
 
 Você verá que o Arquivo AulaDevWebII_Felipe contém alguns arquivos docker.
 Para iniciar o que foi definido no docker compose e não ter acesso ao terminal quando tiver em execução:
-´´´sh
+
+```sh
 docker compose up --build
-´´´
+```
 Ou, para executar e ter acesso ao terminal quando quiser:
-´´´sh
+
+```sh
 docker compose up -d --build
-´´´
+```
 
 Ao executar esses comandos entre em seu navegador e digite 'localhost' , assim, você verá a aplicação funcionando localmente.
 
 #### Comandos para Containers
 
 Visualizar os containers em execução.
-´´´sh
+```sh
 docker ps
-´´´
+```
 
 Exibe uso de recursos dos containers
-´´´sh
+```sh
 docker stats
-´´´
+```
 
 Mostra os status dos containers gerenciados pelo docker compose
-´´´sh
+```sh
 docker compose ps
-´´´
+```
 
 Quais portas do host estão mapeadas para o container nginx
-´´´sh
+```sh
 docker port nginx
-´´´
+```
 
 Para testar a comunicação dos containers app1 e nginx via requisição HTTP
-´´´sh
+```sh
 docker compose exec nginx curl http://app1:5000
-´´´
+```
 
 Para testar a comunicação dos containers app2 e nginx via requisição HTTP, com terminação /oi.
-´´´sh
+```sh
 docker compose exec nginx curl http://app2:5001/oi
-´´´
+```
 
 #### Parar Containers
 
 Para o container app1.
-´´´sh
+```sh
 docker compose stop app1
-´´´
+```
 
 Para o container app2.
-´´´sh
+```sh
 docker compose stop app2
-´´´
+```
 
 Assim conseguimos testar a funcionalidade de backup do App3
 
 #### Limpeza dos Containers
 
 Para e remove todos os containers do docker compose
-´´´sh
+```sh
 docker compose down
-´´´
+```
 
 Remove todos os containers, imagens, redes e volumes não utilizados, limpando completamente o ambiente.
-´´´sh
+```sh
 docker system prune -a
-´´´
+```
